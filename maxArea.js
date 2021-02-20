@@ -14,10 +14,26 @@ function findMaxArea(heights) {
       const height = Math.min(heights[i], heights[j]);
       const width = (j - i);
       const area = height * width;
-      maxArea = Math.max (maxArea, area);
+      maxArea = Math.max(maxArea, area);
     }
   }
   return maxArea;
 }
 
 console.log(findMaxArea(arr));
+
+// Solution 2
+function findMaxArea2(heights) {
+  let maxArea = 0;
+  for (let i = 0; i < heights.length; i++){
+    const height = Math.min(heights[i], heights[heights.length - 1]);
+    if (heights[i] >= height){
+      const width = (heights.length - 1) - i;
+      const area = height * width;
+      maxArea = Math.max(maxArea, area);
+    }
+  }
+  return maxArea;
+}
+
+console.log(findMaxArea2(arr));
