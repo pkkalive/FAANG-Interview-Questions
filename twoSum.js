@@ -6,10 +6,10 @@
 const arr = [1, 3, 7, 9, 2];
 const target = 11;
 
-function twoSum(array, key) {
-  for (let i = 0; i < array.length; i++){
-    for (let j = i + 1; j < array.length; j++) {
-      if (array[i] + array[j] === key){
+function twoSum(nums, target) {
+  for (let i = 0; i < nums.length; i++){
+    for (let j = i + 1; j < nums.length; j++) {
+      if (nums[i] + nums[j] === target){
         return [i , j];
       }
     }
@@ -20,11 +20,11 @@ function twoSum(array, key) {
 console.log(twoSum(arr, target));
 
 // Solution 2
-function twoSum2(array, key) {
+function twoSum2(nums, target) {
   let result = [];
-  for (let i = 0; i < array.length; i++){
-    for (let j = i + 1; j < array.length; j++) {
-      if (array[j] === (key - array[i])){
+  for (let i = 0; i < nums.length; i++){
+    for (let j = i + 1; j < nums.length; j++) {
+      if (nums[j] === (target - nums[i])){
         result.push(i);
         result.push(j);
       }
@@ -33,7 +33,7 @@ function twoSum2(array, key) {
   if (result.length === 2){
     return result
   } else if(result.length > 2 ){
-    return "Given array has more than one possible solutions"
+    return "Given nums has more than one possible solutions"
   } else {
     return "No Match Found";
   }
@@ -42,19 +42,19 @@ function twoSum2(array, key) {
 console.log(twoSum2(arr, target));
 
 // Solution 3
-function twoSum3(array, key) {
+function twoSum3(nums, target) {
   let result = {};
-  if (array.length < 2) {
-    return "Given Array is empty or it less than two entries";
+  if (nums.length < 2) {
+    return "Given array is empty or it less than two entries";
   } else {
-    for (let i = 0; i < array.length; i++){
-      if (!result[key - array[i]]){
-        result[key - array[i]] = i
+    for (let i = 0; i < nums.length; i++){
+      if (!result[target - nums[i]]){
+        result[target - nums[i]] = i
       }
     }
-    for (let i = 0; i < array.length; i++){
-      if (result[array[i]]){
-        return [i, result[array[i]]]
+    for (let i = 0; i < nums.length; i++){
+      if (result[nums[i]]){
+        return [i, result[nums[i]]]
       }
     }
   }
@@ -64,14 +64,14 @@ function twoSum3(array, key) {
 console.log(twoSum3(arr, target));
 
 //Solution 4
-function twoSum4(array, key) {
+function twoSum4(nums, target) {
   let numsMap = {};
-  for (let i = 0; i < array.length; i++){
-    const currentMapVal = numsMap[array[i]];
+  for (let i = 0; i < nums.length; i++){
+    const currentMapVal = numsMap[nums[i]];
     if (currentMapVal >= 0){
       return [currentMapVal, i]
     } else {
-      numsMap[key - array[i]] = i;
+      numsMap[target - nums[i]] = i;
     }
   }
   return null;
