@@ -62,3 +62,18 @@ function twoSum3(array, key) {
 }
 
 console.log(twoSum3(arr, target));
+
+//Solution 4
+function twoSum4(array, key) {
+  let numsMap = {};
+  for (let i = 0; i < array.length; i++){
+    const currentMapVal = numsMap[array[i]];
+    if (currentMapVal >= 0){
+      return [currentMapVal, i]
+    } else {
+      numsMap[key - array[i]] = i;
+    }
+  }
+  return null;
+}
+console.log(twoSum4(arr, target));
