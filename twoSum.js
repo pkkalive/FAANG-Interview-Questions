@@ -43,7 +43,7 @@ console.log(twoSum2(arr, target));
 
 // Solution 3
 function twoSum3(array, key) {
-  let result = {}, j = 1
+  let result = {};
   if (array.length < 2) {
     return "Given Array is empty or it less than two entries";
   } else {
@@ -58,7 +58,7 @@ function twoSum3(array, key) {
       }
     }
   }
-  
+  return null;
 }
 
 console.log(twoSum3(arr, target));
