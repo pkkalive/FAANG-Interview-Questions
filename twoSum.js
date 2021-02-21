@@ -76,4 +76,5 @@ function twoSum4(nums, target) {
   }
   return null;
 }
+
 console.log(twoSum4(arr, target));
