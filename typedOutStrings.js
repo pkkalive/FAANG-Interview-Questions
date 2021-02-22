@@ -35,7 +35,6 @@ function typedOutString(S, T) {
   } else {
     return false;
   }
-  
 }
 
 console.log(typedOutString(S, T));
