@@ -4,7 +4,7 @@
 */
 
 // Solution 1
-const S = "###z", T = "az##z";
+const S = "ab##", T = "c#d#";
 
 function typedOutString(S, T) {
   let str1Array = [...S], str2Array = [...T], resultS = [], resultT = [];
@@ -25,11 +25,15 @@ function typedOutString(S, T) {
   }
 
   if (resultS.length === resultT.length) {
-    for (let i = 0; i < resultS.length; i++) {
-      if (resultS[i] === resultT[i]) {
-        return true;
-      } else {
-        return false;
+    if (resultS.length === 0 && resultT.length === 0) {
+      return true;
+    } else {
+      for (let i = 0; i < resultS.length; i++) {
+        if (resultS[i] === resultT[i]) {
+          return true;
+        } else {
+          return false;
+        }
       }
     }
   } else {
