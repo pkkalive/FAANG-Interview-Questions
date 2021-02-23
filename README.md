@@ -5,4 +5,5 @@
   Find two lines which together with the x-axis forms a container that would hold the greatest ammount of water.
   Return the are of water it would hold.
 3. Trapped Water -- Given an array of integers representing am elevation map where the width of each bar is 1, return how much rainwater can be trapped.
-4. Typed Out Strin -- Given two strings S and T return if they equal when both are typed out. Any '#' that appears in the string counts as a backspace.
+4. Typed Out String -- Given two strings S and T return if they equal when both are typed out. Any '#' that appears in the string counts as a backspace.
+5. Given a string, find the length of the longest substring without repeating characters
