@@ -38,3 +38,19 @@ function isPalindrome2(s) {
 }
 
 console.log(isPalindrome2(str));
+
+// Solution 3
+function isPalindrome3(s) {
+  s = s.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
+  let left = 0; right = s.length - 1;
+  while (left < right) {
+    if (s[left] !== s[right]){ 
+      return false;
+    }
+    left ++;
+    right --;
+  }
+  return true;
+}
+
+console.log(isPalindrome3(str));
