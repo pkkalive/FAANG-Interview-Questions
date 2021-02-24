@@ -54,3 +54,22 @@ function isPalindrome3(s) {
 }
 
 console.log(isPalindrome3(str));
+
+
+// Solution 4
+function isPalindrome4(s) {
+  s = s.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
+  let left = Math.floor(s.length / 2), right = left;
+  if (s.length % 2 === 0) {
+    left --;
+  }
+  while (left >= 0 && right < s.length) {
+    if (s[left] !== s[right]) { 
+      return false;
+    }
+    left --;
+    right ++;
+  }
+  return true;
+}
+console.log(isPalindrome4(str));
