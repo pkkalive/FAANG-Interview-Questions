@@ -6,4 +6,5 @@
   Return the are of water it would hold.
 3. Trapped Water -- Given an array of integers representing am elevation map where the width of each bar is 1, return how much rainwater can be trapped.
 4. Typed Out String -- Given two strings S and T return if they equal when both are typed out. Any '#' that appears in the string counts as a backspace.
-5. Longest SubString -- Given a string, find the length of the longest substring without repeating characters
+5. Longest SubString -- Given a string, find the length of the longest substring without repeating characters.
+6. Palindrome --   Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring case sensitivity.
