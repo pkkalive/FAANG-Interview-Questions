@@ -72,4 +72,5 @@ function isPalindrome4(s) {
   }
   return true;
 }
+
 console.log(isPalindrome4(str));
