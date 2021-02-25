@@ -3,7 +3,6 @@
 */ 
 
 // Solution 1
-
 class ListNode {
   constructor(val, next = null) {
     this.val = val;
