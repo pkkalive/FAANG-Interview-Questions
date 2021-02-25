@@ -7,3 +7,4 @@
 5. Longest SubString -- Given a string, find the length of the longest substring without repeating characters.
 6. Palindrome --   Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring case sensitivity.
 7. Almost Palindrome -- Given a string, determine if it is almost a palindrome. A string is almost a palindrome if it becomes a palindrome by removing 1 letter.Consider only aplhanumeric characters and ignore case sensitivity.
+8. Reverse Linked List -- Given the head of a singly linked list, reverse the list, and return the reversed list.
