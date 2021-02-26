@@ -8,3 +8,4 @@
 6. Palindrome --   Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring case sensitivity.
 7. Almost Palindrome -- Given a string, determine if it is almost a palindrome. A string is almost a palindrome if it becomes a palindrome by removing 1 letter.Consider only aplhanumeric characters and ignore case sensitivity.
 8. Reverse Linked List -- Given the head of a singly linked list, reverse the list, and return the reversed list.
+9. Reversal Linked List -- Given the head of a singly linked list and two integers left and right where left <= right, reverse the nodes of the list from position left to position right, and return the reversed list.
