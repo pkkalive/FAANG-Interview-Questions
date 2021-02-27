@@ -32,9 +32,71 @@ function stringToNumber (str) {
   //use regular expression to extract the number portion of str
   var matchArr = /^\s*((\-|\+)?[0-9]+)\s*/.exec(str);
   if (!matchArr) {
-      return NaN; //not a number
+      return 0; //not a number
   }
   return toNumber(matchArr[1]);
 }
 
 console.log(stringToNumber("42"))
+
+
+//Solution 2
+function stringToNumber2(str) {
+  const MIN = Math.pow(-2, 31)
+  const MAX = Math.pow(2, 31)-1
+  const isSign = new RegExp(/\-|\+/)
+  const isNumber = new RegExp(/[0-9]/)
+  
+  const trimmedStr = str.trim()
+  
+  const validate = numberStr => {
+    const number = parseInt(numberStr, 10)
+    if (!Number.isNaN(number)) {
+      if (number > MAX) return MAX
+      if (number < MIN) return MIN
+      return number
+    }
+    return 0
+  }
+  
+  const getLeadingNumbers = (string) => {
+    let numbers = ''
+    for (let i = 0; i < string.length; i++) {
+      let c = string[i]
+      if (c.match(isNumber)) {
+        numbers += c
+      } else {
+        return numbers
+      }
+    }
+    return numbers
+  }
+  
+//  simple
+  if (!trimmedStr.length) {
+    return 0
+  }
+  
+  const easyInt = parseInt(trimmedStr, 10)
+  if (!Number.isNaN(easyInt)) {
+    return validate(trimmedStr)
+  }
+//   has sign
+  if (trimmedStr[0].match(isSign)){
+//     only a sign is present
+    if (trimmedStr.length <= 1) {
+      return 0
+    }
+//     sign not followed by number
+    if (!trimmedStr[1].match(isNumber)) {
+      return 0
+    }
+    return validate(trimmedStr[0] + getLeadingNumbers(trimmedStr.substring(1)))
+//     no sign
+  } else if (trimmedStr[0].match(isNumber)) {
+    return validate(getLeadingNumbers(trimmedStr))
+  }
+  return 0;
+};
+
+console.log(stringToNumber2("42"))
