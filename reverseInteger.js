@@ -16,6 +16,7 @@ function reverseInteger(x) {
 
 console.log(reverseInteger(123456));
 
+// Solution 2
 function reverseInteger2(x) {
   let revNum = 0, lastDigit = 0;
   while (x!==0) {
@@ -28,3 +29,12 @@ function reverseInteger2(x) {
 }
 
 console.log(reverseInteger2(123456));
+
+// Solution 3
+function reverseInteger3(x) {
+  const reversedInt = Math.abs(x).toString().split('').reverse().join('');
+  if (reversedInt > 2**31) return 0;
+  return reversedInt * Math.sign(x);
+}
+
+console.log(reverseInteger3(123456));
