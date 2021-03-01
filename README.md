@@ -16,3 +16,4 @@
 14. Ransom Note --   Given an arbitrary ransom note string and another string containing letters from all the magazines, write a function that will return true if the ransom note can be constructed from the magazines ; otherwise, it will return false. Each letter in the magazine string can only be used once in your ransom note.
 15. Search in Rotated Array -- Given the array nums after the rotation and an integer target, return the index of target if it is in nums, or -1 if it is not in nums.
 16. Maximum SubArray -- Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
+17. Valid Parantheses -- Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
