@@ -13,3 +13,4 @@
 11. String to Integer -- Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer (similar to C/C++'s atoi function).
 12. Reverse Integer -- Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0.
 13. Move Zeros -- Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+14. Ransom Note --   Given an arbitrary ransom note string and another string containing letters from all the magazines, write a function that will return true if the ransom note can be constructed from the magazines ; otherwise, it will return false. Each letter in the magazine string can only be used once in your ransom note  
